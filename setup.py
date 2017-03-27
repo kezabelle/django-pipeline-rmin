@@ -38,12 +38,15 @@ def make_readme(root_path):
                 yield f.read()
 
 LICENSE = "BSD License"
-URL = ""
+URL = "https://github.com/kezabelle/django-pipeline-rmin"
 LONG_DESCRIPTION = "\r\n\r\n----\r\n\r\n".join(make_readme(HERE))
-SHORT_DESCRIPTION = ""
+SHORT_DESCRIPTION = "django-pipeline compressors for rCSSmin and rJSmin"
 KEYWORDS = (
     "django",
-    "rmin",
+    "rjsmin",
+    "rcssmin",
+    "pipeline",
+    "django-pipeline",
 )
 
 setup(
@@ -61,6 +64,8 @@ setup(
     include_package_data=True,
     install_requires=[
         "Django>=1.8",
+        "rcssmin>=1.0.6",
+        "rjsmin>=1.0.12",
     ],
     tests_require=[
         "pytest>=2.6",
