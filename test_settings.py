@@ -10,19 +10,36 @@ BASE_DIR = os.path.abspath(os.path.dirname(os.path.abspath(__file__)))
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': ':memory:',
     }
 }
 
 INSTALLED_APPS = [
-    'django.contrib.sites',
-    'django.contrib.sessions',
     'django.contrib.contenttypes',
     'django.contrib.staticfiles',
-    'django.contrib.auth',
     'django.contrib.admin',
-    'rmin',
+    'pipeline',
 ]
+
+PIPELINE = {
+    'STYLESHEETS': {
+        'global': {
+            'source_filenames': (
+            ),
+            'output_filename': 'css/global_bundled.css',
+        }
+    },
+    'CSS_COMPRESSOR': 'rmin.RCSSMinCompressor',
+    'JAVASCRIPT': {
+        'global': {
+            'source_filenames': (
+            ),
+            'output_filename': 'css/global_bundled.js',
+        }
+    },
+    'JS_COMPRESSOR': 'rmin.RJSMinCompressor'
+}
+
 
 SKIP_SOUTH_TESTS = True
 SOUTH_TESTS_MIGRATE = False
@@ -43,11 +60,8 @@ PASSWORD_HASHERS = (
 SITE_ID = 1
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth',
 )
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
 )
 TEMPLATES = [
     {
@@ -61,9 +75,6 @@ TEMPLATES = [
 ]
 
 MIDDLEWARE_CLASSES = (
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'test_collectstatic')
