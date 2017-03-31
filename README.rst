@@ -1,14 +1,14 @@
-django-rmin
-================================
+django-pipeline-rmin
+====================
 
 :author: Keryn Knight
 :version: 0.1.0
 
-.. |travis_stable| image:: https://travis-ci.org/kezabelle/django-rmin.svg?branch=0.1.0
-  :target: https://travis-ci.org/kezabelle/django-rmin
+.. |travis_stable| image:: https://travis-ci.org/kezabelle/django-pipeline-rmin.svg?branch=0.1.0
+  :target: https://travis-ci.org/kezabelle/django-pipeline-rmin
 
-.. |travis_master| image:: https://travis-ci.org/kezabelle/django-rmin.svg?branch=master
-  :target: https://travis-ci.org/kezabelle/django-rmin
+.. |travis_master| image:: https://travis-ci.org/kezabelle/django-pipeline-rmin.svg?branch=master
+  :target: https://travis-ci.org/kezabelle/django-pipeline-rmin
 
 ==============  ======
 Release         Status

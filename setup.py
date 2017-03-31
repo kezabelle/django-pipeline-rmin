@@ -50,12 +50,12 @@ KEYWORDS = (
 )
 
 setup(
-    name="django-rmin",
+    name="django-pipeline-rmin",
     version="0.1.0",
     author="Keryn Knight",
-    author_email="django-rmin@kerynknight.com",
+    author_email="django-pipeline-rmin@kerynknight.com",
     maintainer="Keryn Knight",
-    maintainer_email="django-rmin@kerynknight.com",
+    maintainer_email="django-pipeline-rmin@kerynknight.com",
     description=SHORT_DESCRIPTION[0:200],
     long_description=LONG_DESCRIPTION,
     packages=[
